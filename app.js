@@ -1,5 +1,8 @@
 const button = document.querySelector("button");
 const output = document.querySelector(".output");
+const buttonMessage = document.querySelector(".button");
+const outputMessage = document.querySelector(".outputMessage");
+const inputMessage = document.querySelector(".inputMessage");
 const tipVat = 0.15;
 
 button.innerHTML = "Hello";
@@ -11,3 +14,7 @@ button.addEventListener("click", function() {
   let temp = `<h1> You should top $${tip} on  $${cost.value}</h1>`;
   output.innerHTML = temp;
 });
+buttonMessage.addEventListener("click", showMessage);
+function showMessage() {
+  outputMessage.innerHTML = ` Hello ${inputMessage.value}`;
+}
